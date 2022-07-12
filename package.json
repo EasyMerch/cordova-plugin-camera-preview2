@@ -1,0 +1,14 @@
+{
+	"name": "cordova-plugin-camera-preview2",
+	"version": "0.0.1",
+	"description": "Camera Preview 2",
+	"cordova": {
+	  "id": "cordova-plugin-camera-preview2",
+	  "platforms": [
+		"android",
+		"ios"
+	  ]
+	},
+	"repository": "github:Easymerch/cordova-plugin-camera-preview2",
+	"keywords": []
+  }

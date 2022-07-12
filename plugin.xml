@@ -1,0 +1,32 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+		id="cordova-plugin-camera-preview2" version="0.0.1">
+	<name>CameraPreview2</name>
+	<description>Camera preview</description>
+	<keywords>cordova,camera,camera2,preview</keywords>
+
+	<js-module src="www/camera-preview.js" name="camera-preview2">
+		<clobbers target="CameraPreview2" />
+	</js-module>
+
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="CameraPreview2" >
+				<param name="android-package" value="ru.pronetcom.camerapreview2.CameraPreview2"/>
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="android.permission.CAMERA" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+			<uses-feature android:name="android.hardware.camera" android:required="false" />
+			<uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+			<uses-feature android:name="android.hardware.camera.flash" android:required="false" />
+		</config-file>
+
+		<source-file src="src/android/CameraPreview2.java" target-dir="src/ru/pronetcom/camerapreview2" />
+		<source-file src="src/android/Camera2.java" target-dir="src/ru/pronetcom/camerapreview2" />
+
+		<source-file src="src/android/camera2_layout.xml" target-dir="res/layout" />
+	</platform>
+</plugin>

@@ -1,1 +1,1 @@
-# cordova-plugin-camera2
+# cordova-plugin-camera-preview2
